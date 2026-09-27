@@ -48,7 +48,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="bg-red">
+        <div className="bg-accent">
           <div className="mx-auto flex max-w-[1240px] flex-col gap-3 px-6 py-6 md:flex-row md:items-center md:justify-between md:gap-6 md:px-10">
             <div className="flex flex-col gap-1 md:flex-row md:items-baseline md:gap-6">
               <span className="text-xs uppercase tracking-[0.14em] text-paper/75">
@@ -61,7 +61,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/evenements"
-              className="inline-block shrink-0 border border-paper px-5 py-2.5 text-sm text-paper transition-colors hover:bg-paper hover:text-red"
+              className="inline-block shrink-0 border border-paper px-5 py-2.5 text-sm text-paper transition-colors hover:bg-paper hover:text-accent"
             >
               Participer à cet événement
             </Link>

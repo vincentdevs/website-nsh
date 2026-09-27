@@ -21,8 +21,8 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-accent">
-      <div className="h-1 bg-red" />
+    <header className="bg-red">
+      <div className="h-1 bg-accent" />
       <div className="mx-auto flex max-w-[1240px] items-center justify-between px-6 py-4 md:px-10">
         <Link
           href="/"
@@ -52,7 +52,9 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={`text-[0.9rem] tracking-[0.01em] whitespace-nowrap transition-colors ${
-                    active ? "text-red" : "text-deep-text hover:text-deep-soft"
+                    active
+                      ? "text-deep-text underline decoration-accent decoration-2 underline-offset-8"
+                      : "text-deep-text/80 hover:text-deep-text"
                   }`}
                 >
                   {item.label}
@@ -83,7 +85,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav className="border-t border-deep-soft/40 bg-accent px-6 py-4 lg:hidden">
+        <nav className="border-t border-red-ink bg-red px-6 py-4 lg:hidden">
           <ul className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
