@@ -82,7 +82,7 @@ export default function EvenementsPage() {
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-start">
                     <div className="relative aspect-[16/9] w-full overflow-hidden md:col-span-5">
                       <Image
-                        src={asset("/media/hero/geneve-photo.jpg")}
+                        src={event.photo}
                         alt={event.title}
                         fill
                         sizes="(min-width: 768px) 40vw, 100vw"

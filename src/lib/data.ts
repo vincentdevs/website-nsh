@@ -64,6 +64,7 @@ export const EVENTS = [
     time: "18h30 - 22h00",
     location: "Maison Dufour",
     address: "Rue de Contamines 9A, 1206 Genève",
+    photo: asset("/media/evenements/werly-8-octobre-2026.png"),
     bio: "Journaliste et essayiste, Richard Werly est aujourd'hui le correspondant France/Europe du média Suisse Blick, après une longue carrière au Temps. Il a auparavant travaillé à Bangkok, Tokyo, Bruxelles et Genève. Il est notamment l'auteur de deux ouvrages : Europe : rallumer les étoiles (Nevicata, 2020) et Cette Amérique qui nous déteste (Nevicata, 2025).",
     registrationNote:
       "Entrée libre (mais sur inscription). Veuillez préciser le titre de la conférence dans l'objet du courriel.",
