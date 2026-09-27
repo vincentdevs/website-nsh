@@ -33,8 +33,8 @@ export function SiteHeader() {
           <Image
             src={asset("/brand/logo-horizontal.png")}
             alt="NSH Genève"
-            width={1766}
-            height={460}
+            width={1742}
+            height={363}
             className="h-10 w-auto md:h-12"
             priority
           />

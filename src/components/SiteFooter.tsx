@@ -27,8 +27,8 @@ export function SiteFooter() {
           <Image
             src={asset("/brand/logo-horizontal.png")}
             alt="NSH Genève"
-            width={1766}
-            height={460}
+            width={1742}
+            height={363}
             className="h-11 w-auto"
           />
           <p className="mt-4 max-w-[38ch] text-sm leading-relaxed text-deep-soft">
