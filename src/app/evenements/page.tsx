@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageBanner } from "@/components/PageBanner";
 import { CONTACT_EMAIL, UPCOMING_EVENT } from "@/lib/data";
@@ -63,18 +64,25 @@ export default function EvenementsPage() {
         </h2>
 
         <article className="border-b border-line py-10">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
-            <div className="md:col-span-2">
-              <p className="font-serif text-3xl text-ink">
-                {UPCOMING_EVENT.dayNumber}
-              </p>
-              <p className="mt-1 text-sm text-ink-soft">
-                {UPCOMING_EVENT.time}
-              </p>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-start">
+            <div className="relative aspect-[16/9] w-full overflow-hidden md:col-span-5">
+              <Image
+                src={asset("/media/hero/geneve-photo.jpg")}
+                alt={UPCOMING_EVENT.title}
+                fill
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover"
+              />
             </div>
 
             <div className="md:col-span-7">
-              <h3 className="text-xl font-medium text-ink">
+              <div className="flex flex-wrap items-baseline gap-3">
+                <p className="font-serif text-3xl text-ink">
+                  {UPCOMING_EVENT.dayNumber}
+                </p>
+                <p className="text-sm text-ink-soft">{UPCOMING_EVENT.time}</p>
+              </div>
+              <h3 className="mt-2 text-xl font-medium text-ink">
                 {UPCOMING_EVENT.title}
               </h3>
               <p className="mt-1 text-sm text-ink-soft">
@@ -86,18 +94,18 @@ export default function EvenementsPage() {
               <p className="mt-4 max-w-[60ch] text-base leading-[1.65] text-ink-soft">
                 {UPCOMING_EVENT.bio}
               </p>
-            </div>
 
-            <div className="flex flex-col items-start gap-3 md:col-span-3 md:items-end">
-              <a
-                href={mailtoHref}
-                className="inline-block bg-ink px-5 py-2.5 text-sm text-paper transition-colors hover:bg-red"
-              >
-                Participer à cet événement
-              </a>
-              <p className="max-w-[24ch] text-xs text-ink-soft md:text-right">
-                {UPCOMING_EVENT.registrationNote}
-              </p>
+              <div className="mt-6 flex flex-col items-start gap-3">
+                <a
+                  href={mailtoHref}
+                  className="inline-block bg-ink px-5 py-2.5 text-sm text-paper transition-colors hover:bg-red"
+                >
+                  Participer à cet événement
+                </a>
+                <p className="max-w-[40ch] text-xs text-ink-soft">
+                  {UPCOMING_EVENT.registrationNote}
+                </p>
+              </div>
             </div>
           </div>
         </article>
