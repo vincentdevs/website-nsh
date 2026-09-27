@@ -22,7 +22,6 @@ export function SiteHeader() {
 
   return (
     <header className="bg-deep">
-      <div className="h-1 bg-red" />
       <div className="mx-auto flex max-w-[1240px] items-center justify-between px-6 py-4 md:px-10">
         <Link
           href="/"
