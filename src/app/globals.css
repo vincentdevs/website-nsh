@@ -3,7 +3,7 @@
 :root {
   --color-paper: #ffffff;
   --color-paper-raised: #d7cdcc;
-  --color-ink: #10190f;
+  --color-ink: #0d0d0c;
   --color-ink-soft: #59656f;
   --color-line: #c7bab8;
   --color-red: #782228;
@@ -11,9 +11,9 @@
   --color-accent: #59656f;
   --color-accent-ink: #434c53;
   --color-mist: #d7cdcc;
-  --color-deep: #091e05;
+  --color-deep: #000100;
   --color-deep-text: #ffffff;
-  --color-deep-soft: #a7ad9f;
+  --color-deep-soft: #a8a8a6;
 }
 
 @theme inline {

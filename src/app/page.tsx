@@ -199,7 +199,7 @@ export default function HomePage() {
           <ul className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3">
             {boardLeads.map((member) => (
               <li key={member.name} className="text-center">
-                <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full ring-2 ring-deep-soft/30">
+                <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full bg-red">
                   <Image
                     src={member.photo}
                     alt={member.name}
