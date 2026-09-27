@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageBanner } from "@/components/PageBanner";
 import { CONTACT_EMAIL, UPCOMING_EVENT } from "@/lib/data";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Événements",
@@ -19,7 +20,7 @@ export default function EvenementsPage() {
         title="Événements"
         description="La NSH-Genève offre à ses membres l'opportunité de participer à des débats et des conférences qui enrichissent le dialogue national et renforcent la cohésion de notre société."
         image={{
-          src: "/media/hero/geneve-photo.jpg",
+          src: asset("/media/hero/geneve-photo.jpg"),
           alt: "Vue du lac Léman depuis Genève",
         }}
       />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageBanner } from "@/components/PageBanner";
 import { DON_BANK_DETAILS } from "@/lib/data";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Soutenir",
@@ -16,7 +17,7 @@ export default function SoutenirPage() {
         title="Soutenir"
         description="La NSH-Genève, organisation à but non lucratif, subsiste grâce à la générosité de ses membres et sympathisants. Votre contribution financière revêt une importance capitale, car elle nous permet de poursuivre notre mission avec détermination et efficacité."
         image={{
-          src: "/media/hero/geneve-photo.jpg",
+          src: asset("/media/hero/geneve-photo.jpg"),
           alt: "Vue de Genève et du Léman",
         }}
       />
@@ -62,7 +63,7 @@ export default function SoutenirPage() {
             <h3 className="text-base font-medium text-ink">Twint</h3>
             <div className="mt-4 overflow-hidden border border-line">
               <Image
-                src="/media/twint-don.png"
+                src={asset("/media/twint-don.png")}
                 alt="Faire un don via Twint à la NSH-Genève"
                 width={1024}
                 height={467}

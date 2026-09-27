@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MailtoForm } from "@/components/MailtoForm";
 import { PageBanner } from "@/components/PageBanner";
 import { COTISATIONS, CONTACT_EMAIL } from "@/lib/data";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Adhérer",
@@ -16,7 +17,7 @@ export default function AdhererPage() {
         title="Adhérer"
         description="Rejoignez la NSH-Genève pour participer activement au renforcement des valeurs qui unissent la Suisse et à la promotion d'une citoyenneté éclairée."
         image={{
-          src: "/media/hero/geneve-photo.jpg",
+          src: asset("/media/hero/geneve-photo.jpg"),
           alt: "Vue du lac Léman et de la ville de Genève",
         }}
       />

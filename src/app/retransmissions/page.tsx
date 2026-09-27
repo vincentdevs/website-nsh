@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageBanner } from "@/components/PageBanner";
 import { ReplayLibrary } from "@/components/ReplayLibrary";
 import { REPLAYS } from "@/lib/data";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Retransmissions",
@@ -16,7 +17,7 @@ export default function RetransmissionsPage() {
         title="Retransmissions"
         description="Les conférences de la NSH-Genève sont enregistrées afin que celles et ceux qui n'ont pu s'y rendre puissent suivre les échanges dans leur intégralité."
         image={{
-          src: "/media/hero/geneve-photo.jpg",
+          src: asset("/media/hero/geneve-photo.jpg"),
           alt: "Vue du Mont Blanc depuis Genève",
         }}
       />

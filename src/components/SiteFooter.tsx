@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { asset } from "@/lib/asset";
 import {
   ASSOCIATION_FULL_NAME,
   BUS_ACCESS,
@@ -25,7 +26,7 @@ export function SiteFooter() {
         <div>
           <div className="inline-flex rounded-sm bg-paper px-3 py-2">
             <Image
-              src="/brand/logo-nsh.png"
+              src={asset("/brand/logo-nsh.png")}
               alt="NSH Genève"
               width={300}
               height={150}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { asset } from "@/lib/asset";
 
 const NAV_ITEMS = [
   { href: "/", label: "Accueil" },
@@ -30,7 +31,7 @@ export function SiteHeader() {
           aria-label="NSH Genève, accueil"
         >
           <Image
-            src="/brand/logo-nsh.png"
+            src={asset("/brand/logo-nsh.png")}
             alt="NSH Genève"
             width={300}
             height={150}

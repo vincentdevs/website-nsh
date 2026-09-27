@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MailtoForm } from "@/components/MailtoForm";
 import { PageBanner } from "@/components/PageBanner";
 import { BUS_ACCESS, CONTACT_EMAIL } from "@/lib/data";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -15,7 +16,7 @@ export default function ContactPage() {
         title="Contact"
         description="Une question, le souhait de rejoindre la NSH-Genève, ou toute autre demande : écrivez-nous."
         image={{
-          src: "/media/hero/geneve-photo.jpg",
+          src: asset("/media/hero/geneve-photo.jpg"),
           alt: "Vue de Genève depuis le lac",
         }}
       />

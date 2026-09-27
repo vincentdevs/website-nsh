@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 export const ASSOCIATION_NAME = "NSH Genève";
 export const ASSOCIATION_FULL_NAME =
   "Nouvelle Société Helvétique, groupe de Genève";
@@ -10,37 +12,37 @@ export const COMMITTEE = [
     name: "Nicolas Rey",
     role: "Président",
     email: "presidence@nsh-geneve.ch",
-    photo: "/media/comite/nicolas-rey.png",
+    photo: asset("/media/comite/nicolas-rey.png"),
   },
   {
     name: "Alexandre Ben Khalifa",
     role: "Secrétaire",
     email: "secretariat@nsh-geneve.ch",
-    photo: "/media/comite/alexandre-ben-khalifa.png",
+    photo: asset("/media/comite/alexandre-ben-khalifa.png"),
   },
   {
     name: "Dimitri Chichlo",
     role: "Trésorier",
     email: "tresorerie@nsh-geneve.ch",
-    photo: "/media/comite/dimitri-chichlo.png",
+    photo: asset("/media/comite/dimitri-chichlo.png"),
   },
   {
     name: "Sebastian Aeschbach",
     role: "Membre du Comité",
     email: undefined,
-    photo: "/media/comite/sebastian-aeschbach.png",
+    photo: asset("/media/comite/sebastian-aeschbach.png"),
   },
   {
     name: "Maurice Stauffacher",
     role: "Membre du Comité",
     email: undefined,
-    photo: "/media/comite/maurice-stauffacher.png",
+    photo: asset("/media/comite/maurice-stauffacher.png"),
   },
   {
     name: "Philippe Jobin",
     role: "Membre du Comité",
     email: undefined,
-    photo: "/media/comite/philippe-jobin.png",
+    photo: asset("/media/comite/philippe-jobin.png"),
   },
 ];
 

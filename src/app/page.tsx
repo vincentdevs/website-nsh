@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { COMMITTEE, REPLAYS, UPCOMING_EVENT } from "@/lib/data";
 
 export default function HomePage() {
@@ -11,7 +12,7 @@ export default function HomePage() {
       <section className="relative">
         <div className="relative h-[560px] w-full overflow-hidden md:h-[640px]">
           <Image
-            src="/media/hero/geneve-photo.jpg"
+            src={asset("/media/hero/geneve-photo.jpg")}
             alt="Vue aérienne de la rade de Genève et du lac Léman"
             fill
             priority
@@ -92,7 +93,7 @@ export default function HomePage() {
           <div className="flex items-start justify-center md:col-span-5 md:justify-end">
             <div className="relative aspect-[4/3] w-full max-w-md overflow-hidden rounded-sm">
               <Image
-                src="/media/hero/geneve-photo.jpg"
+                src={asset("/media/hero/geneve-photo.jpg")}
                 alt="Le jet d'eau et la rade de Genève"
                 fill
                 sizes="(min-width: 768px) 400px, 100vw"

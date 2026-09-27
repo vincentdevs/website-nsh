@@ -8,6 +8,7 @@ import {
   NHG_HREF,
   STATUTS_PDF_HREF,
 } from "@/lib/data";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "La NSH",
@@ -22,7 +23,7 @@ export default function LaNshPage() {
         title="La NSH-Genève"
         description="Une association qui réunit des citoyens soucieux de réaffirmer et redéfinir l'identité suisse à travers les défis de chaque époque."
         image={{
-          src: "/media/hero/geneve-photo.jpg",
+          src: asset("/media/hero/geneve-photo.jpg"),
           alt: "Vue de la rade de Genève",
         }}
       />
