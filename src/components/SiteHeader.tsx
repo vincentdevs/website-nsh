@@ -33,7 +33,7 @@ export function SiteHeader() {
           <Image
             src={asset("/brand/logo-horizontal.png")}
             alt="NSH Genève"
-            width={1672}
+            width={1766}
             height={460}
             className="h-10 w-auto md:h-12"
             priority
@@ -51,7 +51,7 @@ export function SiteHeader() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-[0.9rem] tracking-[0.01em] whitespace-nowrap transition-colors ${
+                  className={`font-serif text-[1.08rem] tracking-[0.01em] whitespace-nowrap transition-colors ${
                     active ? "text-red" : "text-deep-text hover:text-deep-soft"
                   }`}
                 >
@@ -90,7 +90,7 @@ export function SiteHeader() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block text-[1.0625rem] text-deep-text"
+                  className="block font-serif text-[1.275rem] text-deep-text"
                 >
                   {item.label}
                 </Link>
