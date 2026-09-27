@@ -157,7 +157,7 @@ export default function LaNshPage() {
                     alt={member.name}
                     fill
                     sizes="112px"
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
                 <p className="mt-4 text-base font-medium text-ink">

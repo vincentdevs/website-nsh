@@ -26,16 +26,16 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-[1240px] items-center justify-between px-6 py-4 md:px-10">
         <Link
           href="/"
-          className="flex items-center rounded-sm bg-paper px-3 py-2"
+          className="flex items-center"
           onClick={() => setOpen(false)}
           aria-label="NSH Genève, accueil"
         >
           <Image
-            src={asset("/brand/logo-nsh.png")}
+            src={asset("/brand/logo-nsh-white.png")}
             alt="NSH Genève"
-            width={300}
-            height={150}
-            className="h-9 w-auto"
+            width={1787}
+            height={779}
+            className="h-12 w-auto md:h-14"
             priority
           />
         </Link>

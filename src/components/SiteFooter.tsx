@@ -24,15 +24,13 @@ export function SiteFooter() {
     <footer className="bg-deep text-deep-text">
       <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-10 px-6 py-14 md:grid-cols-3 md:px-10 md:py-16">
         <div>
-          <div className="inline-flex rounded-sm bg-paper px-3 py-2">
-            <Image
-              src={asset("/brand/logo-nsh.png")}
-              alt="NSH Genève"
-              width={300}
-              height={150}
-              className="h-9 w-auto"
-            />
-          </div>
+          <Image
+            src={asset("/brand/logo-nsh-white.png")}
+            alt="NSH Genève"
+            width={1787}
+            height={779}
+            className="h-12 w-auto"
+          />
           <p className="mt-4 max-w-[38ch] text-sm leading-relaxed text-deep-soft">
             Section genevoise de la Nouvelle Société Helvétique, association
             fondée en 1914. Une plateforme de dialogue et de réflexion sur des
