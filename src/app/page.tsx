@@ -10,14 +10,14 @@ export default function HomePage() {
   return (
     <>
       <section className="relative">
-        <div className="relative h-[560px] w-full overflow-hidden md:h-[640px]">
+        <div className="relative h-[476px] w-full overflow-hidden md:h-[544px]">
           <Image
             src={asset("/media/hero/geneve-photo.jpg")}
             alt="Vue aérienne de la rade de Genève et du lac Léman"
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className="object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-deep via-deep/55 to-deep/10" />
 
@@ -97,7 +97,7 @@ export default function HomePage() {
                 alt="Le jet d'eau et la rade de Genève"
                 fill
                 sizes="(min-width: 768px) 400px, 100vw"
-                className="object-cover"
+                className="object-cover opacity-80"
                 style={{ objectPosition: "70% 40%" }}
               />
             </div>

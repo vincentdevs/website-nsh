@@ -31,11 +31,11 @@ export function SiteHeader() {
           aria-label="NSH Genève, accueil"
         >
           <Image
-            src={asset("/brand/logo-nsh-white.png")}
+            src={asset("/brand/logo-horizontal.png")}
             alt="NSH Genève"
-            width={1787}
-            height={779}
-            className="h-12 w-auto md:h-14"
+            width={1764}
+            height={460}
+            className="h-10 w-auto md:h-12"
             priority
           />
         </Link>

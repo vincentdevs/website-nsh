@@ -18,7 +18,7 @@ export function PageBanner({
   description,
   image,
   imageWidthClassName = "w-64 md:w-80",
-  imageClassName = "object-cover",
+  imageClassName = "object-cover opacity-80",
   children,
 }: PageBannerProps) {
   return (

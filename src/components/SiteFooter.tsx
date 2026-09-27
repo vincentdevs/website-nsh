@@ -25,11 +25,11 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-10 px-6 py-14 md:grid-cols-3 md:px-10 md:py-16">
         <div>
           <Image
-            src={asset("/brand/logo-nsh-white.png")}
+            src={asset("/brand/logo-horizontal.png")}
             alt="NSH Genève"
-            width={1787}
-            height={779}
-            className="h-12 w-auto"
+            width={1764}
+            height={460}
+            className="h-11 w-auto"
           />
           <p className="mt-4 max-w-[38ch] text-sm leading-relaxed text-deep-soft">
             Section genevoise de la Nouvelle Société Helvétique, association
