@@ -21,8 +21,8 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-red">
-      <div className="h-1 bg-accent" />
+    <header className="bg-deep">
+      <div className="h-1 bg-red" />
       <div className="mx-auto flex max-w-[1240px] items-center justify-between px-6 py-4 md:px-10">
         <Link
           href="/"
@@ -33,7 +33,7 @@ export function SiteHeader() {
           <Image
             src={asset("/brand/logo-horizontal.png")}
             alt="NSH Genève"
-            width={1764}
+            width={1672}
             height={460}
             className="h-10 w-auto md:h-12"
             priority
@@ -52,9 +52,7 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={`text-[0.9rem] tracking-[0.01em] whitespace-nowrap transition-colors ${
-                    active
-                      ? "text-deep-text underline decoration-accent decoration-2 underline-offset-8"
-                      : "text-deep-text/80 hover:text-deep-text"
+                    active ? "text-red" : "text-deep-text hover:text-deep-soft"
                   }`}
                 >
                   {item.label}
@@ -85,7 +83,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav className="border-t border-red-ink bg-red px-6 py-4 lg:hidden">
+        <nav className="border-t border-deep-soft/40 bg-deep px-6 py-4 lg:hidden">
           <ul className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
