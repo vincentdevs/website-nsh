@@ -34,7 +34,11 @@ export default function HomePage() {
               La Nouvelle Société Helvétique, fondée en 1914, est une
               association qui réunit des citoyens soucieux de réaffirmer et
               redéfinir l&apos;identité suisse à travers les défis de chaque
-              époque.
+              époque. Elle organise des conférences et des débats ouverts à
+              tous pour confronter les points de vue sur les grands enjeux
+              nationaux et internationaux, et se compose de sections
+              cantonales appelées groupes. Ce site est celui du groupe de
+              Genève.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
