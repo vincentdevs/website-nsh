@@ -1,7 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { asset } from "@/lib/asset";
-import { COMMITTEE, REPLAYS, UPCOMING_EVENT } from "@/lib/data";
+import {
+  CERCLE_ROUSSEAU_EVENT,
+  COMMITTEE,
+  REPLAYS,
+  UPCOMING_EVENT,
+} from "@/lib/data";
 
 export default function HomePage() {
   const featuredReplays = REPLAYS.slice(0, 3);
@@ -65,6 +70,44 @@ export default function HomePage() {
             >
               Participer à cet événement
             </Link>
+          </div>
+        </div>
+
+        <div className="bg-paper-raised">
+          <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-8 px-6 py-10 md:grid-cols-12 md:items-center md:gap-10 md:px-10">
+            <div className="relative aspect-[16/9] w-full overflow-hidden md:col-span-5">
+              <Image
+                src={CERCLE_ROUSSEAU_EVENT.photo}
+                alt={CERCLE_ROUSSEAU_EVENT.title}
+                fill
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="md:col-span-7">
+              <span className="inline-block bg-deep px-3 py-1 text-xs uppercase tracking-[0.14em] text-deep-text">
+                Événement partenaire · Cercle Rousseau
+              </span>
+              <h3 className="mt-4 font-serif text-xl leading-snug text-ink md:text-2xl">
+                {CERCLE_ROUSSEAU_EVENT.title}
+              </h3>
+              <p className="mt-2 text-sm text-ink-soft">
+                {CERCLE_ROUSSEAU_EVENT.date} à {CERCLE_ROUSSEAU_EVENT.time} ·{" "}
+                {CERCLE_ROUSSEAU_EVENT.location} · Avec{" "}
+                {CERCLE_ROUSSEAU_EVENT.speaker}
+              </p>
+              <p className="mt-4 max-w-[60ch] text-base leading-[1.65] text-ink-soft">
+                {CERCLE_ROUSSEAU_EVENT.summary}
+              </p>
+              <a
+                href={CERCLE_ROUSSEAU_EVENT.href}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-5 inline-block border border-ink px-6 py-3 text-[0.9375rem] text-ink transition-colors hover:border-accent hover:text-accent"
+              >
+                Voir l&apos;événement sur le site du Cercle Rousseau
+              </a>
+            </div>
           </div>
         </div>
       </section>

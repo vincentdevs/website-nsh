@@ -207,3 +207,15 @@ export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@CercleRousseau";
 
 export const CERCLE_ROUSSEAU_URL = "https://cerclerousseau.ch";
 export const CERCLE_ROUSSEAU_VIDEOS_URL = "https://cerclerousseau.ch/videos";
+
+export const CERCLE_ROUSSEAU_EVENT = {
+  title: "De la fourche à la fourchette : les défis de l'agriculture d'aujourd'hui",
+  speaker: "Blaise Hofmann",
+  date: "23 novembre 2026",
+  time: "19h15",
+  location: "Librairie Le Valentin",
+  summary:
+    "Blaise Hofmann interroge les défis de l'agriculture suisse d'aujourd'hui, de la production à l'assiette. Entrée libre, réservation obligatoire par e-mail (places limitées).",
+  href: "https://cerclerousseau.ch/evenements/de-la-fourche-a-la-fourchette-les-defis-de-l-agriculture-d-aujourd-hui",
+  photo: asset("/media/partenaires/cercle-rousseau-evenement.png"),
+};
