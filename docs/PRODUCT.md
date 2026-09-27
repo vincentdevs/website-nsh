@@ -1,4 +1,4 @@
-# NSH Genève — refonte de design
+# NSH Genève, refonte de design
 
 ## Objectif
 
@@ -10,8 +10,8 @@ similaire), avec sa propre palette de couleurs et son propre contenu.
 
 - Sept pages : Accueil, La NSH, Événements, Retransmissions, Adhérer,
   Soutenir, Contact.
-- Contenu statique, repris de nsh-ge.ch (voir `src/lib/data.ts` pour la
-  source unique de tous les textes et données réutilisés).
+- Contenu statique, repris de nsh-ge.ch (tous les textes et données
+  réutilisés sont regroupés dans `src/lib/data.ts`).
 - Pas de CMS ni de backend d'envoi d'email : les formulaires ouvrent le
   client mail du visiteur.
 

@@ -1,4 +1,4 @@
-# NSH Genève — refonte de design
+# NSH Genève, refonte de design
 
 Concept de refonte du site de la Nouvelle Société Helvétique, section de
 Genève (nsh-ge.ch), pour qui c'est fait, et pourquoi il existe.
@@ -18,7 +18,7 @@ la même que sur le site actuel. Rien n'a été inventé.
 
 ## Différence avec le site actuel
 
-Le site actuel de la NSH-Genève est une page d'accueil unique qui empile tout
+Le site actuel de la NSH-Genève tient sur une seule page d'accueil, qui empile tout
 le contenu. Cette refonte le répartit sur sept pages, une par thème (Accueil,
 La NSH, Événements, Retransmissions, Adhérer, Soutenir, Contact), pour que
 chaque page réponde à une seule question du visiteur.
