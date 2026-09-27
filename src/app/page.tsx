@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <>
       <section className="relative">
-        <div className="relative h-[476px] w-full overflow-hidden md:h-[544px]">
+        <div className="relative h-[620px] w-full overflow-hidden md:h-[720px]">
           <Image
             src={asset("/media/hero/geneve-photo.jpg")}
             alt="Vue aérienne de la rade de Genève et du lac Léman"
@@ -26,7 +26,7 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-deep via-deep/55 to-deep/10" />
 
-          <div className="relative mx-auto flex h-full max-w-[1240px] flex-col justify-end px-6 pb-20 md:px-10 md:pb-24">
+          <div className="relative mx-auto flex h-full max-w-[1240px] flex-col justify-end px-6 pb-64 md:px-10 md:pb-80">
             <h1 className="max-w-[20ch] font-serif text-[clamp(2.6rem,4.68vw+1.04rem,4.94rem)] leading-[1.05] tracking-[-0.01em] text-deep-text">
               La NSH-Genève vous souhaite la bienvenue
             </h1>
@@ -54,22 +54,45 @@ export default function HomePage() {
         </div>
 
         <div className="bg-accent">
-          <div className="mx-auto flex max-w-[1240px] flex-col gap-3 px-6 py-6 md:flex-row md:items-center md:justify-between md:gap-6 md:px-10">
-            <div className="flex flex-col gap-1 md:flex-row md:items-baseline md:gap-6">
-              <span className="text-xs uppercase tracking-[0.14em] text-paper/75">
-                Prochain événement
-              </span>
-              <span className="font-serif text-xl text-paper">
-                {UPCOMING_EVENT.date}
-              </span>
-              <span className="text-paper/90">{UPCOMING_EVENT.title}</span>
+          <div className="mx-auto max-w-[1240px] px-6 py-6 md:px-10">
+            <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-6">
+              <div className="flex flex-col gap-1 md:flex-row md:items-baseline md:gap-6">
+                <span className="text-xs uppercase tracking-[0.14em] text-paper/75">
+                  Prochain événement
+                </span>
+                <span className="font-serif text-xl text-paper">
+                  {UPCOMING_EVENT.date}
+                </span>
+                <span className="text-paper/90">{UPCOMING_EVENT.title}</span>
+              </div>
+              <Link
+                href="/evenements"
+                className="inline-block shrink-0 border border-paper px-5 py-2.5 text-sm text-paper transition-colors hover:bg-paper hover:text-accent"
+              >
+                Participer à cet événement
+              </Link>
             </div>
-            <Link
-              href="/evenements"
-              className="inline-block shrink-0 border border-paper px-5 py-2.5 text-sm text-paper transition-colors hover:bg-paper hover:text-accent"
-            >
-              Participer à cet événement
-            </Link>
+
+            <div className="mt-6 grid grid-cols-1 gap-4 border-t border-paper/20 pt-6 md:grid-cols-12 md:items-center md:gap-8">
+              <div className="relative aspect-[16/9] w-full overflow-hidden md:col-span-5">
+                <Image
+                  src={asset("/media/hero/geneve-photo.jpg")}
+                  alt={UPCOMING_EVENT.title}
+                  fill
+                  sizes="(min-width: 768px) 40vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="md:col-span-7 md:text-right">
+                <p className="font-serif text-2xl text-paper">
+                  {UPCOMING_EVENT.date}
+                </p>
+                <p className="mt-1 text-paper/90">{UPCOMING_EVENT.time}</p>
+                <p className="mt-1 text-sm text-paper/75">
+                  {UPCOMING_EVENT.location} · {UPCOMING_EVENT.address}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
