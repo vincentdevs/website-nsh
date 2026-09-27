@@ -6,6 +6,8 @@ export const ASSOCIATION_FULL_NAME =
 
 export const CONTACT_EMAIL = "secretariat@nsh-geneve.ch";
 export const BUS_ACCESS = "Bus 1/5/8/20 - Arrêt Contamines";
+export const CONTACT_ENDPOINT =
+  "https://nsh-geneve-contact.querovincent.workers.dev";
 
 export const COMMITTEE = [
   {

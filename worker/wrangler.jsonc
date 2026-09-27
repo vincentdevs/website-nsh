@@ -1,0 +1,10 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "nsh-geneve-contact",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-27",
+  "vars": {
+    "CONTACT_TO_EMAIL": "secretariat@nsh-geneve.ch",
+    "ALLOWED_ORIGIN": "https://vincentdevs.github.io"
+  }
+}
