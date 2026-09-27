@@ -32,9 +32,9 @@ export function ReplayLibrary({ replays }: { replays: typeof REPLAYS }) {
       </div>
       <div className="mt-4 flex flex-wrap items-baseline justify-between gap-3">
         <div>
-          <h3 className="text-lg font-medium leading-snug text-ink">
+          <h2 className="text-lg font-medium leading-snug text-ink">
             {active.title}
-          </h3>
+          </h2>
           <p className="mt-1 text-sm text-ink-soft">{active.speaker}</p>
         </div>
         <span className="shrink-0 text-sm text-ink-soft">
@@ -44,9 +44,9 @@ export function ReplayLibrary({ replays }: { replays: typeof REPLAYS }) {
 
       {rest.length > 0 && (
         <div className="mt-14 border-t border-line pt-10">
-          <h4 className="text-sm font-medium uppercase tracking-[0.08em] text-ink-soft">
+          <h3 className="text-sm font-medium uppercase tracking-[0.08em] text-ink-soft">
             Toutes les retransmissions
-          </h4>
+          </h3>
           <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {shown.map((replay) => (
               <button
@@ -66,9 +66,9 @@ export function ReplayLibrary({ replays }: { replays: typeof REPLAYS }) {
                     className="h-full w-full object-cover transition-transform group-hover:scale-[1.02]"
                   />
                 </div>
-                <h5 className="mt-3 text-base font-medium leading-snug text-ink group-hover:text-red">
+                <h4 className="mt-3 text-base font-medium leading-snug text-ink group-hover:text-red">
                   {replay.title}
-                </h5>
+                </h4>
                 <p className="mt-1 text-sm text-ink-soft">
                   {replay.speaker} · {replay.date}
                 </p>

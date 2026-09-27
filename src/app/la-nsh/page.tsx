@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageBanner } from "@/components/PageBanner";
 import {
+  CERCLE_ROUSSEAU_URL,
   COMMITTEE,
   HLS_ARTICLE_HREF,
   NHG_HREF,
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
   title: "La NSH",
   description:
     "Présentation, mission et comité de la Nouvelle Société Helvétique, section de Genève.",
+  alternates: { canonical: "/la-nsh" },
 };
 
 export default function LaNshPage() {
@@ -92,6 +94,17 @@ export default function LaNshPage() {
                 La NSH-Genève offre à ses membres l&apos;opportunité de
                 participer à des débats et des conférences qui enrichissent le
                 dialogue national et renforce la cohésion de notre société.
+                Ses conférences sont diffusées sur une chaîne YouTube
+                partagée avec le{" "}
+                <a
+                  href={CERCLE_ROUSSEAU_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-ink underline decoration-line underline-offset-4 hover:text-red"
+                >
+                  Cercle Rousseau
+                </a>
+                , qui organise également des conférences en Suisse romande.
               </p>
               <p className="mt-4 max-w-[60ch] text-base leading-[1.7] text-ink-soft">
                 Nous invitons tous ceux qui partagent notre vision d&apos;une

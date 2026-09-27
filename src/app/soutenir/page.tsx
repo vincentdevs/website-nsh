@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Soutenir",
   description:
     "Faire un don à la NSH-Genève, par virement bancaire ou par Twint.",
+  alternates: { canonical: "/soutenir" },
 };
 
 export default function SoutenirPage() {

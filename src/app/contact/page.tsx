@@ -6,7 +6,9 @@ import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Écrire à la NSH-Genève.",
+  description:
+    "Écrire à la NSH-Genève par email, ou nous rejoindre à Genève, bus 1/5/8/20, arrêt Contamines.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

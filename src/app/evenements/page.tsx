@@ -1,12 +1,40 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageBanner } from "@/components/PageBanner";
 import { CONTACT_EMAIL, UPCOMING_EVENT } from "@/lib/data";
 import { asset } from "@/lib/asset";
+import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Événements",
   description:
     "Le calendrier des conférences et débats de la NSH-Genève.",
+  alternates: { canonical: "/evenements" },
+};
+
+const EVENT_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: UPCOMING_EVENT.title,
+  startDate: "2026-10-08T18:30:00+02:00",
+  endDate: "2026-10-08T22:00:00+02:00",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  description: UPCOMING_EVENT.bio,
+  location: {
+    "@type": "Place",
+    name: UPCOMING_EVENT.location,
+    address: UPCOMING_EVENT.address,
+  },
+  performer: {
+    "@type": "Person",
+    name: UPCOMING_EVENT.speaker,
+  },
+  organizer: {
+    "@type": "Organization",
+    name: "NSH Genève",
+    url: SITE_URL,
+  },
 };
 
 export default function EvenementsPage() {
@@ -16,6 +44,10 @@ export default function EvenementsPage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(EVENT_JSON_LD) }}
+      />
       <PageBanner
         title="Événements"
         description="La NSH-Genève offre à ses membres l'opportunité de participer à des débats et des conférences qui enrichissent le dialogue national et renforcent la cohésion de notre société."
@@ -74,12 +106,12 @@ export default function EvenementsPage() {
           Les prochaines rencontres seront annoncées ici au fur et à mesure,
           ainsi que dans la lettre d&apos;information de la NSH-Genève. Pour
           revoir les conférences passées, consultez les{" "}
-          <a
+          <Link
             href="/retransmissions"
             className="text-ink underline decoration-line underline-offset-4 hover:text-red"
           >
             retransmissions
-          </a>
+          </Link>
           .
         </p>
       </div>

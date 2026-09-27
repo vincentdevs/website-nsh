@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Adhérer",
   description:
     "Adhérer à la NSH-Genève : formulaire d'adhésion et montants de cotisation.",
+  alternates: { canonical: "/adherer" },
 };
 
 export default function AdhererPage() {

@@ -176,14 +176,12 @@ export const COTISATIONS = [
   {
     label: "Cotisation individuelle",
     amount: "CHF 60.00",
-    pdfHref:
-      "https://nsh-ge.ch/wp-content/uploads/2026/01/Facture_QR_Cotisation-individuelle.pdf",
+    pdfHref: asset("/documents/cotisation-individuelle.pdf"),
   },
   {
     label: "Cotisation couple",
     amount: "CHF 90.00",
-    pdfHref:
-      "https://nsh-ge.ch/wp-content/uploads/2026/01/Facture_QR_Cotisation-couple.pdf",
+    pdfHref: asset("/documents/cotisation-couple.pdf"),
   },
 ];
 
@@ -193,14 +191,17 @@ export const DON_BANK_DETAILS = {
   account: "12-1049-7",
   beneficiary:
     "NOUVELLE SOCIETE HELVETIQUE GROUPE DE GENEVE / 1206 Genève",
-  pdfHref:
-    "https://nsh-ge.ch/wp-content/uploads/2024/11/NSH-Geneve_Facture_QR_Don.pdf",
+  pdfHref: asset("/documents/facture-don.pdf"),
 };
 
-export const STATUTS_PDF_HREF =
-  "https://nsh-ge.ch/wp-content/uploads/2026/01/Projet_NSH_Statuts_valides_260128.pdf";
+export const STATUTS_PDF_HREF = asset("/documents/statuts-nsh-geneve.pdf");
 
 export const HLS_ARTICLE_HREF =
   "https://hls-dhs-dss.ch/fr/articles/016430/2009-04-30/";
 
 export const NHG_HREF = "https://nhg.ch/";
+
+export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@CercleRousseau";
+
+export const CERCLE_ROUSSEAU_URL = "https://cerclerousseau.ch";
+export const CERCLE_ROUSSEAU_VIDEOS_URL = "https://cerclerousseau.ch/videos";
