@@ -70,38 +70,24 @@ export default function HomePage() {
       </section>
 
       <section className="border-y border-line bg-paper">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-10 px-6 py-16 md:grid-cols-12 md:gap-12 md:px-10 md:py-20">
-          <div className="md:col-span-7">
-            <h2 className="text-[clamp(1.75rem,2vw+1rem,2.25rem)] leading-[1.2] text-ink">
-              Une plateforme de dialogue et de réflexion
-            </h2>
-            <p className="mt-6 max-w-[52ch] text-base leading-[1.65] text-ink-soft">
-              La NSH-Genève, ancrée dans un riche tissu local, constitue une
-              plateforme de dialogue et de réflexion sur des enjeux nationaux
-              et internationaux. Nous nous engageons à encourager une
-              citoyenneté active, informée, et consciente des responsabilités
-              qui incombent à chaque citoyen dans le cadre de notre démocratie
-              directe.
-            </p>
-            <Link
-              href="/la-nsh"
-              className="mt-6 inline-block text-sm text-ink-soft underline decoration-line underline-offset-4 hover:text-red"
-            >
-              Découvrir la NSH-Genève et son comité
-            </Link>
-          </div>
-          <div className="flex items-start justify-center md:col-span-5 md:justify-end">
-            <div className="relative aspect-[4/3] w-full max-w-md overflow-hidden rounded-sm">
-              <Image
-                src={asset("/media/hero/geneve-photo.jpg")}
-                alt="Le jet d'eau et la rade de Genève"
-                fill
-                sizes="(min-width: 768px) 400px, 100vw"
-                className="object-cover opacity-80"
-                style={{ objectPosition: "70% 40%" }}
-              />
-            </div>
-          </div>
+        <div className="mx-auto max-w-[1240px] px-6 py-16 md:px-10 md:py-20">
+          <h2 className="text-[clamp(1.75rem,2vw+1rem,2.25rem)] leading-[1.2] text-ink">
+            Une plateforme de dialogue et de réflexion
+          </h2>
+          <p className="mt-6 max-w-[60ch] text-base leading-[1.65] text-ink-soft">
+            La NSH-Genève, ancrée dans un riche tissu local, constitue une
+            plateforme de dialogue et de réflexion sur des enjeux nationaux
+            et internationaux. Nous nous engageons à encourager une
+            citoyenneté active, informée, et consciente des responsabilités
+            qui incombent à chaque citoyen dans le cadre de notre démocratie
+            directe.
+          </p>
+          <Link
+            href="/la-nsh"
+            className="mt-6 inline-block text-sm text-ink-soft underline decoration-line underline-offset-4 hover:text-red"
+          >
+            Découvrir la NSH-Genève et son comité
+          </Link>
         </div>
       </section>
 

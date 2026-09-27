@@ -8,8 +8,6 @@ type PageBannerProps = {
     src: string;
     alt: string;
   };
-  imageWidthClassName?: string;
-  imageClassName?: string;
   children?: ReactNode;
 };
 
@@ -17,40 +15,33 @@ export function PageBanner({
   title,
   description,
   image,
-  imageWidthClassName = "w-64 md:w-80",
-  imageClassName = "object-cover opacity-80",
   children,
 }: PageBannerProps) {
   return (
-    <div className="antique-paper border-b border-line bg-paper-raised">
-      <div className="mx-auto max-w-[1240px] px-6 py-16 md:px-10 md:py-20">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-center">
-          <div className="max-w-[62ch] md:col-span-7">
-            <h1 className="font-serif text-[clamp(2.34rem,3.12vw+1.04rem,3.38rem)] leading-[1.1] text-ink">
-              {title}
-            </h1>
-            {description && (
-              <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-                {description}
-              </p>
-            )}
-            {children}
-          </div>
-          <div className="flex justify-center md:col-span-5 md:justify-end">
-            <div
-              className={`relative aspect-[4/3] overflow-hidden rounded-sm shadow-[0_18px_40px_-24px_rgba(9,30,5,0.55)] ${imageWidthClassName}`}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                sizes="(min-width: 768px) 320px, 260px"
-                className={imageClassName}
-              />
-            </div>
-          </div>
+    <section className="relative">
+      <div className="relative h-[360px] w-full overflow-hidden md:h-[420px]">
+        <Image
+          src={image.src}
+          alt={image.alt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-deep via-deep/55 to-deep/10" />
+
+        <div className="relative mx-auto flex h-full max-w-[1240px] flex-col justify-end px-6 pb-12 md:px-10 md:pb-16">
+          <h1 className="max-w-[20ch] font-serif text-[clamp(2.6rem,4.68vw+1.04rem,4.94rem)] leading-[1.05] tracking-[-0.01em] text-deep-text">
+            {title}
+          </h1>
+          {description && (
+            <p className="mt-6 max-w-[60ch] text-lg leading-[1.65] text-deep-text/85">
+              {description}
+            </p>
+          )}
+          {children}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
