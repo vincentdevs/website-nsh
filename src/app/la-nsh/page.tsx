@@ -46,8 +46,8 @@ export default function LaNshPage() {
                   className="text-ink underline decoration-line underline-offset-4 hover:text-red"
                 >
                   Nouvelle Société Helvétique
-                </a>{" "}
-                (NSH), fondée en 1914, est une association qui réunit des
+                </a>
+                , fondée en 1914, est une association qui réunit des
                 citoyens soucieux de réaffirmer et redéfinir l&apos;identité
                 suisse à travers les défis de chaque époque.{" "}
                 <a

@@ -26,7 +26,7 @@ export default function HomePage() {
               La NSH-Genève vous souhaite la bienvenue
             </h1>
             <p className="mt-6 max-w-[60ch] text-lg leading-[1.65] text-deep-text/85">
-              La Nouvelle Société Helvétique (NSH), fondée en 1914, est une
+              La Nouvelle Société Helvétique, fondée en 1914, est une
               association qui réunit des citoyens soucieux de réaffirmer et
               redéfinir l&apos;identité suisse à travers les défis de chaque
               époque.
