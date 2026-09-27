@@ -27,7 +27,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-deep via-deep/55 to-deep/10" />
 
           <div className="relative mx-auto flex h-full max-w-[1240px] flex-col justify-end px-6 pb-24 md:px-10 md:pb-32">
-            <h1 className="max-w-[20ch] font-serif text-[clamp(2.6rem,4.68vw+1.04rem,4.94rem)] leading-[1.05] tracking-[-0.01em] text-deep-text">
+            <h1 className="max-w-[16ch] font-serif text-[clamp(2.6rem,4.68vw+1.04rem,4.94rem)] leading-[1.05] tracking-[-0.01em] text-deep-text">
               La NSH-Genève vous souhaite la bienvenue
             </h1>
             <p className="mt-6 max-w-[60ch] text-lg leading-[1.65] text-deep-text/85">
