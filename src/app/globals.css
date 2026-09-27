@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  --color-paper: #ffffff;
+  --color-paper-raised: #d7cdcc;
+  --color-ink: #10190f;
+  --color-ink-soft: #59656f;
+  --color-line: #c7bab8;
+  --color-red: #782228;
+  --color-red-ink: #5a1a1f;
+  --color-accent: #59656f;
+  --color-accent-ink: #434c53;
+  --color-mist: #d7cdcc;
+  --color-deep: #091e05;
+  --color-deep-text: #ffffff;
+  --color-deep-soft: #a7ad9f;
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-paper-raised: var(--color-paper-raised);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-line: var(--color-line);
+  --color-red: var(--color-red);
+  --color-red-ink: var(--color-red-ink);
+  --color-accent: var(--color-accent);
+  --color-accent-ink: var(--color-accent-ink);
+  --color-mist: var(--color-mist);
+  --color-deep: var(--color-deep);
+  --color-deep-text: var(--color-deep-text);
+  --color-deep-soft: var(--color-deep-soft);
+  --font-serif: var(--font-cardo);
+  --font-sans: var(--font-commissioner);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+p, li {
+  text-wrap: pretty;
+}
+
+.antique-paper {
+  position: relative;
+  isolation: isolate;
+}
+
+.antique-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.28;
+  mix-blend-mode: multiply;
+  background-image:
+    radial-gradient(
+      140% 120% at 50% 40%,
+      transparent 55%,
+      color-mix(in srgb, var(--color-ink) 14%, transparent) 100%
+    ),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='500'><filter id='s'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='11' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0.32 0.32 0.32 0 -0.6'/></filter><rect width='100%25' height='100%25' filter='url(%23s)'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'><filter id='m'><feTurbulence type='fractalNoise' baseFrequency='0.008 0.011' numOctaves='4' seed='7' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.2 0'/></filter><rect width='100%25' height='100%25' filter='url(%23m)'/></svg>");
+  background-size: 100% 100%, 500px 500px, 600px 600px;
+}
+
+.antique-paper > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
