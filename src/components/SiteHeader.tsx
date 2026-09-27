@@ -21,7 +21,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-deep">
+    <header className="bg-accent">
       <div className="h-1 bg-red" />
       <div className="mx-auto flex max-w-[1240px] items-center justify-between px-6 py-4 md:px-10">
         <Link
@@ -83,7 +83,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav className="border-t border-deep-soft bg-deep px-6 py-4 lg:hidden">
+        <nav className="border-t border-deep-soft/40 bg-accent px-6 py-4 lg:hidden">
           <ul className="flex flex-col gap-4">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
