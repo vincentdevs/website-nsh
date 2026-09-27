@@ -48,20 +48,37 @@ export const COMMITTEE = [
   },
 ];
 
-export const UPCOMING_EVENT = {
-  title:
-    "La Suisse dans un monde sans boussole: entre Europe fragilisée et Amérique hostile",
-  speaker: "Richard Werly",
-  date: "8 octobre 2026",
-  dayNumber: "8",
-  monthLabel: "Octobre 2026",
-  time: "18h30 - 22h00",
-  location: "Maison Dufour",
-  address: "Rue de Contamines 9A, 1206 Genève",
-  bio: "Journaliste et essayiste, Richard Werly est aujourd'hui le correspondant France/Europe du média Suisse Blick, après une longue carrière au Temps. Il a auparavant travaillé à Bangkok, Tokyo, Bruxelles et Genève. Il est notamment l'auteur de deux ouvrages : Europe : rallumer les étoiles (Nevicata, 2020) et Cette Amérique qui nous déteste (Nevicata, 2025).",
-  registrationNote:
-    "Entrée libre (mais sur inscription). Veuillez préciser le titre de la conférence dans l'objet du courriel.",
-};
+// Evenements publies sur nsh-ge.ch. Chaque entree porte startDateTime pour
+// permettre le tri chronologique ; ajouter un evenement ici suffit a le
+// faire apparaitre sur /evenements, tandis que la home n'affiche que le
+// plus proche a venir (voir UPCOMING_EVENT plus bas).
+export const EVENTS = [
+  {
+    title:
+      "La Suisse dans un monde sans boussole: entre Europe fragilisée et Amérique hostile",
+    speaker: "Richard Werly",
+    date: "8 octobre 2026",
+    startDateTime: "2026-10-08T18:30:00+02:00",
+    dayNumber: "8",
+    monthLabel: "Octobre 2026",
+    time: "18h30 - 22h00",
+    location: "Maison Dufour",
+    address: "Rue de Contamines 9A, 1206 Genève",
+    bio: "Journaliste et essayiste, Richard Werly est aujourd'hui le correspondant France/Europe du média Suisse Blick, après une longue carrière au Temps. Il a auparavant travaillé à Bangkok, Tokyo, Bruxelles et Genève. Il est notamment l'auteur de deux ouvrages : Europe : rallumer les étoiles (Nevicata, 2020) et Cette Amérique qui nous déteste (Nevicata, 2025).",
+    registrationNote:
+      "Entrée libre (mais sur inscription). Veuillez préciser le titre de la conférence dans l'objet du courriel.",
+  },
+];
+
+export const UPCOMING_EVENTS = [...EVENTS]
+  .filter((event) => new Date(event.startDateTime).getTime() >= Date.now())
+  .sort(
+    (a, b) =>
+      new Date(a.startDateTime).getTime() -
+      new Date(b.startDateTime).getTime(),
+  );
+
+export const UPCOMING_EVENT = UPCOMING_EVENTS[0] ?? EVENTS[0];
 
 export const REPLAYS = [
   {
