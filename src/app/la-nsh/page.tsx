@@ -143,15 +143,17 @@ export default function LaNshPage() {
             </div>
           </aside>
         </div>
+      </div>
 
-        <section id="comite" className="mt-20 scroll-mt-24 border-t border-line pt-16">
-          <h2 className="text-[clamp(1.75rem,2vw+1rem,2.25rem)] leading-[1.2] text-ink">
+      <section id="comite" className="scroll-mt-24 bg-deep py-16 text-deep-text md:py-20">
+        <div className="mx-auto max-w-[1240px] px-6 md:px-10">
+          <h2 className="font-serif text-[clamp(1.75rem,2vw+1rem,2.25rem)] leading-[1.2] text-deep-text">
             Membres du comité de la NSH-Genève
           </h2>
           <ul className="mt-10 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {COMMITTEE.map((member) => (
               <li key={member.name} className="text-center sm:text-left">
-                <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full bg-red sm:mx-0">
+                <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full sm:mx-0">
                   <Image
                     src={member.photo}
                     alt={member.name}
@@ -160,14 +162,14 @@ export default function LaNshPage() {
                     className="object-contain"
                   />
                 </div>
-                <p className="mt-4 text-base font-medium text-ink">
+                <p className="mt-4 text-base font-medium text-deep-text">
                   {member.name}
                 </p>
-                <p className="text-sm text-ink-soft">{member.role}</p>
+                <p className="text-sm text-deep-soft">{member.role}</p>
                 {member.email && (
                   <a
                     href={`mailto:${member.email}`}
-                    className="mt-1 inline-block text-sm text-ink-soft underline decoration-line underline-offset-4 hover:text-red"
+                    className="mt-1 inline-block text-sm text-deep-soft underline decoration-deep-soft/40 underline-offset-4 hover:text-red"
                   >
                     {member.email}
                   </a>
@@ -175,8 +177,8 @@ export default function LaNshPage() {
               </li>
             ))}
           </ul>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }
