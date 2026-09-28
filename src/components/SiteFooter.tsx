@@ -21,8 +21,17 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-deep text-deep-text">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-10 px-6 py-14 md:grid-cols-3 md:px-10 md:py-16">
+    <footer className="relative overflow-hidden bg-deep text-deep-text">
+      <Image
+        src={asset("/media/footer/geneve-rade-soir.jpg")}
+        alt="La rade de Genève au crépuscule"
+        fill
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-[#000100]/60" />
+
+      <div className="relative mx-auto grid max-w-[1240px] grid-cols-1 gap-10 px-6 py-14 md:grid-cols-3 md:px-10 md:py-16">
         <div>
           <Image
             src={asset("/brand/logo-horizontal.png")}
@@ -72,7 +81,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="border-t border-deep-soft/20 px-6 py-5 md:px-10">
+      <div className="relative border-t border-deep-soft/20 px-6 py-5 md:px-10">
         <p className="mx-auto max-w-[1240px] text-xs text-deep-soft">
           {ASSOCIATION_FULL_NAME}, association à but non lucratif. Tous droits
           réservés. &copy; {year}.
