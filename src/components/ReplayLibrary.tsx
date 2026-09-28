@@ -49,13 +49,11 @@ export function ReplayLibrary({ replays }: { replays: typeof REPLAYS }) {
           </h3>
           <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {shown.map((replay) => (
-              <button
+              <a
                 key={replay.youtubeId}
-                type="button"
-                onClick={() => {
-                  setActiveIndex(replays.indexOf(replay));
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
+                href={`https://www.youtube.com/watch?v=${replay.youtubeId}`}
+                target="_blank"
+                rel="noreferrer"
                 className="group block text-left"
               >
                 <div className="relative aspect-video overflow-hidden bg-paper">
@@ -72,7 +70,7 @@ export function ReplayLibrary({ replays }: { replays: typeof REPLAYS }) {
                 <p className="mt-1 text-sm text-ink-soft">
                   {replay.speaker} · {replay.date}
                 </p>
-              </button>
+              </a>
             ))}
           </div>
 
