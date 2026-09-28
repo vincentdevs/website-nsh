@@ -45,7 +45,7 @@ export function ReplayLibrary({ replays }: { replays: typeof REPLAYS }) {
       </div>
 
       {rest.length > 0 && (
-        <div className="mt-14 border-t border-line pt-10">
+        <div className="mt-16">
           <h3 className="text-sm font-medium uppercase tracking-[0.08em] text-ink-soft">
             Toutes les retransmissions
           </h3>

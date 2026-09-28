@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FeaturedReplays } from "@/components/FeaturedReplays";
+import { MailtoForm } from "@/components/MailtoForm";
 import { asset } from "@/lib/asset";
 import {
   CERCLE_ROUSSEAU_EVENT,
   COMMITTEE,
+  CONTACT_EMAIL,
   REPLAYS,
   UPCOMING_EVENT,
 } from "@/lib/data";
@@ -16,7 +18,7 @@ export default function HomePage() {
   return (
     <>
       <section className="relative">
-        <div className="relative h-[620px] w-full overflow-hidden md:h-[720px]">
+        <div className="relative min-h-[632px] w-full overflow-hidden md:h-[734px]">
           <Image
             src={asset("/media/hero/geneve-photo.jpg")}
             alt="Vue aérienne de la rade de Genève et du lac Léman"
@@ -27,11 +29,11 @@ export default function HomePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-deep via-deep/55 to-deep/10" />
 
-          <div className="relative mx-auto flex h-full max-w-[1240px] flex-col justify-center px-6 md:px-10">
-            <h1 className="max-w-[16ch] font-serif text-[clamp(2.6rem,4.68vw+1.04rem,4.94rem)] leading-[1.05] tracking-[-0.01em] text-deep-text">
+          <div className="relative mx-auto flex min-h-[632px] max-w-[1240px] flex-col justify-center px-6 py-20 md:h-full md:min-h-0 md:translate-y-[3%] md:px-10 md:py-0">
+            <h1 className="max-w-[16.8ch] font-serif text-[clamp(2.6rem,4.68vw+1.04rem,4.94rem)] leading-[1.05] tracking-[-0.01em] text-deep-text">
               La NSH-Genève vous souhaite la bienvenue
             </h1>
-            <p className="mt-6 max-w-[60ch] text-lg leading-[1.65] text-deep-text/85">
+            <p className="mt-6 max-w-[63ch] text-lg leading-[1.65] text-deep-text/85">
               La Nouvelle Société Helvétique, fondée en 1914, est une
               association qui réunit des citoyens soucieux de réaffirmer et
               redéfinir l&apos;identité suisse à travers les défis de chaque
@@ -58,7 +60,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="bg-accent">
+        <div className="bg-red">
           <div className="mx-auto max-w-[1240px] px-6 py-8 md:px-10">
             <div className="flex flex-col gap-6 border border-paper/25 p-6 md:flex-row md:items-center md:gap-8 md:p-8">
               <div className="relative aspect-video w-full shrink-0 overflow-hidden md:w-56">
@@ -81,7 +83,7 @@ export default function HomePage() {
               </div>
               <Link
                 href="/evenements"
-                className="inline-block shrink-0 border border-paper px-5 py-2.5 text-sm text-paper transition-colors hover:bg-paper hover:text-accent"
+                className="inline-block shrink-0 border border-paper px-5 py-2.5 text-sm text-paper transition-colors hover:bg-paper hover:text-red"
               >
                 Participer à cet événement
               </Link>
@@ -128,7 +130,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-line bg-paper">
+      <section className="bg-paper">
         <div className="mx-auto max-w-[1240px] px-6 py-16 md:px-10 md:py-20">
           <h2 className="text-[clamp(1.75rem,2vw+1rem,2.25rem)] leading-[1.2] text-ink">
             Une plateforme de dialogue et de réflexion
@@ -150,7 +152,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-line bg-paper-raised">
+      <section className="bg-paper-raised">
         <div className="mx-auto max-w-[1240px] px-6 py-16 md:px-10 md:py-20">
           <div className="flex flex-wrap items-baseline justify-between gap-4">
             <h2 className="text-[clamp(1.75rem,2vw+1rem,2.25rem)] leading-[1.2] text-ink">
@@ -210,27 +212,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-t border-line bg-paper-raised">
-        <div className="mx-auto max-w-[1240px] px-6 py-16 md:px-10 md:py-20">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-end">
-            <div className="md:col-span-8">
-              <h2 className="text-[clamp(1.75rem,2vw+1rem,2.25rem)] leading-[1.2] text-ink">
-                Vous souhaitez participer à notre prochain événement ?
-              </h2>
-              <p className="mt-4 max-w-[55ch] text-base leading-relaxed text-ink-soft">
-                Rejoignez-nous pour participer activement au renforcement des
-                valeurs qui unissent la Suisse et à la promotion d&apos;une
-                citoyenneté éclairée.
-              </p>
-            </div>
-            <div className="md:col-span-4 md:text-right">
-              <Link
-                href="/contact"
-                className="inline-block bg-deep px-6 py-3 text-[0.9375rem] text-deep-text transition-opacity hover:opacity-90"
-              >
-                Nous écrire
-              </Link>
-            </div>
+      <section id="nous-ecrire" className="bg-paper-raised">
+        <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 px-6 py-16 md:grid-cols-12 md:px-10 md:py-20">
+          <div className="md:col-span-5">
+            <h2 className="text-[clamp(1.75rem,2vw+1rem,2.25rem)] leading-[1.2] text-ink">
+              Vous souhaitez participer à notre prochain événement ?
+            </h2>
+            <p className="mt-4 max-w-[40ch] text-base leading-relaxed text-ink-soft">
+              Rejoignez-nous pour participer activement au renforcement des
+              valeurs qui unissent la Suisse et à la promotion d&apos;une
+              citoyenneté éclairée.
+            </p>
+          </div>
+          <div className="md:col-span-7">
+            <MailtoForm recipient={CONTACT_EMAIL} subject="Contact NSH-Genève" />
           </div>
         </div>
       </section>

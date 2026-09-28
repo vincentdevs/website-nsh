@@ -64,7 +64,7 @@ export default function LaNshPage() {
               </p>
             </section>
 
-            <section className="mt-14 border-t border-line pt-10">
+            <section className="mt-16">
               <h2 className="text-[clamp(1.5rem,1.6vw+1rem,1.875rem)] leading-[1.2] text-ink">
                 Mission de la NSH-Genève
               </h2>
@@ -86,7 +86,7 @@ export default function LaNshPage() {
               </a>
             </section>
 
-            <section className="mt-14 border-t border-line pt-10">
+            <section className="mt-16">
               <h2 className="text-[clamp(1.5rem,1.6vw+1rem,1.875rem)] leading-[1.2] text-ink">
                 Un lieu de débat et d&apos;action
               </h2>

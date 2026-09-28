@@ -73,12 +73,16 @@ export default function EvenementsPage() {
             return (
               <div key={event.startDateTime}>
                 {showMonthHeader && (
-                  <h2 className="border-b border-line pb-3 text-sm font-medium uppercase tracking-[0.08em] text-ink-soft first:mt-0 [&:not(:first-child)]:mt-14">
+                  <h2 className="text-sm font-medium uppercase tracking-[0.08em] text-ink-soft first:mt-0 [&:not(:first-child)]:mt-14">
                     {event.monthLabel}
                   </h2>
                 )}
 
-                <article className="border-b border-line py-10">
+                <article
+                  className={
+                    showMonthHeader ? "py-10" : "border-t border-hairline py-10"
+                  }
+                >
                   <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-center">
                     <div className="relative aspect-[16/9] w-full overflow-hidden md:col-span-5">
                       <Image

@@ -30,7 +30,8 @@ tokens Tailwind (`bg-paper`, `text-ink`, etc.) via `@theme inline`.
 | `paper-raised` | `--color-paper-raised` | `#d7cdcc` | Fond des sections alternées (Dust Grey) |
 | `ink` | `--color-ink` | `#0d0d0c` | Texte principal sur fond clair |
 | `ink-soft` | `--color-ink-soft` | `#59656f` | Texte secondaire sur fond clair |
-| `line` | `--color-line` | `#c7bab8` | Bordures, séparateurs |
+| `line` | `--color-line` | `#c7bab8` | Bordures des cartes et des champs de formulaire |
+| `hairline` | `--color-hairline` | Encre à 20 % | Lignes de séparation (voir « Lignes de séparation ») |
 | `red` | `--color-red` | `#782228` | Burgundy, couleur de marque, CTA et accents forts |
 | `red-ink` | `--color-red-ink` | `#5a1a1f` | Variante foncée du rouge (hover, texte sur rouge) |
 | `accent` | `--color-accent` | `#59656f` | Blue Slate, deuxième accent de marque |
@@ -106,11 +107,37 @@ d'arrondi).
 - Section pleine largeur (fond alterné `paper` / `paper-raised` / `deep`) :
   `py-16 md:py-20` pour une section standard, `py-14 md:py-16` pour une
   section resserrée (bandeau comité, footer).
-- Séparateur entre blocs internes à une page (ex. La NSH) : `border-t
-  border-line`, avec `mt-14 pt-10`.
+- Blocs internes à une page (ex. La NSH) : séparés par l'espace seul,
+  `mt-16`, sans ligne.
+- Deux sections pleine largeur de fonds différents ne sont jamais séparées
+  par une ligne, le changement de fond suffit.
 - Cartes bordées (ex. carte "Prochain événement", encadré "En bref") :
   `border border-line` (ou `border-paper/25` sur fond sombre), padding
   `p-6 md:p-8`.
+
+## Lignes de séparation
+
+Reprises des sites du Cercle Rousseau et de Tribea, définies dans
+`src/app/globals.css`. Il n'y a qu'une épaisseur, un filet de 1px en
+`hairline` (l'encre à 20 %), et les lignes restent rares.
+
+- `rules-between` : à poser sur le parent d'une liste. Il trace un filet
+  entre deux éléments, jamais au-dessus du premier ni sous le dernier.
+  Utilisé pour les cotisations sur Adhérer.
+- Quand la liste est entrecoupée d'intertitres, comme les événements groupés
+  par mois, l'élément porte lui-même `border-t border-hairline`, sauf quand
+  il suit directement un intertitre.
+- Les sections et les blocs d'une page ne sont jamais séparés par une ligne,
+  seulement par l'espace et par le changement de fond.
+
+## Formulaires
+
+Identiques au site du Cercle Rousseau (classe `field` dans `globals.css`,
+composant `MailtoForm`). Chaque champ n'a qu'une ligne en dessous, en encre,
+sans cadre, et elle ne change jamais d'aspect. Le focus se lit sur le
+libellé, qui passe du gris à l'encre et prend un petit carré de 6px. Le
+formulaire est utilisé sur Contact, sur Adhérer et en bas de l'accueil
+(`#nous-ecrire`).
 
 ## Photos
 
