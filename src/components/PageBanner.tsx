@@ -35,7 +35,7 @@ export function PageBanner({
             {title}
           </h1>
           {description && (
-            <p className="mt-6 max-w-[60ch] text-lg leading-[1.65] text-deep-text/85">
+            <p className="mt-6 max-w-[60ch] text-lg leading-[1.65] text-deep-text/85 md:min-h-[5.6rem]">
               {description}
             </p>
           )}
