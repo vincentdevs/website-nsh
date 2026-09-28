@@ -160,10 +160,10 @@ export default function LaNshPage() {
 
       <section id="comite" className="scroll-mt-24 bg-deep py-16 text-deep-text md:py-20">
         <div className="mx-auto max-w-[1240px] px-6 md:px-10">
-          <h2 className="font-serif text-[clamp(1.75rem,2vw+1rem,2.25rem)] leading-[1.2] text-deep-text">
+          <h2 className="text-center font-serif text-[clamp(1.75rem,2vw+1rem,2.25rem)] leading-[1.2] text-deep-text">
             Membres du comité de la NSH-Genève
           </h2>
-          <ul className="mt-10 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-16 grid grid-cols-1 gap-x-8 gap-y-20 sm:grid-cols-2 lg:grid-cols-3">
             {COMMITTEE.map((member) => (
               <li key={member.name} className="text-center">
                 <div className="relative mx-auto h-44 w-44 overflow-hidden rounded-full sm:h-32 sm:w-32 lg:h-28 lg:w-28">
