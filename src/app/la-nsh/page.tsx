@@ -165,8 +165,8 @@ export default function LaNshPage() {
           </h2>
           <ul className="mt-10 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {COMMITTEE.map((member) => (
-              <li key={member.name} className="text-center sm:text-left">
-                <div className="relative mx-auto h-44 w-44 overflow-hidden rounded-full sm:mx-0 sm:h-32 sm:w-32 lg:h-28 lg:w-28">
+              <li key={member.name} className="text-center">
+                <div className="relative mx-auto h-44 w-44 overflow-hidden rounded-full sm:h-32 sm:w-32 lg:h-28 lg:w-28">
                   <Image
                     src={member.photo}
                     alt={member.name}
