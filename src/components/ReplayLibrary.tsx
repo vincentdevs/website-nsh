@@ -16,7 +16,7 @@ export function ReplayLibrary({ replays }: { replays: typeof REPLAYS }) {
 
   return (
     <div>
-      <div className="mx-auto max-w-[620px]">
+      <div className="mx-auto max-w-[560px]">
         <div
           className="relative w-full overflow-hidden bg-paper-raised"
           style={{ aspectRatio: "16 / 9" }}
