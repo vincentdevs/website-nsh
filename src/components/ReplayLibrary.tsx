@@ -16,30 +16,32 @@ export function ReplayLibrary({ replays }: { replays: typeof REPLAYS }) {
 
   return (
     <div>
-      <div
-        className="relative w-full overflow-hidden bg-paper-raised"
-        style={{ aspectRatio: "16 / 9" }}
-      >
-        <iframe
-          key={active.youtubeId}
-          src={`https://www.youtube-nocookie.com/embed/${active.youtubeId}`}
-          title={active.title}
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          className="absolute inset-0 h-full w-full border-0"
-        />
-      </div>
-      <div className="mt-4 flex flex-wrap items-baseline justify-between gap-3">
-        <div>
-          <h2 className="text-lg font-medium leading-snug text-ink">
-            {active.title}
-          </h2>
-          <p className="mt-1 text-sm text-ink-soft">{active.speaker}</p>
+      <div className="mx-auto max-w-[620px]">
+        <div
+          className="relative w-full overflow-hidden bg-paper-raised"
+          style={{ aspectRatio: "16 / 9" }}
+        >
+          <iframe
+            key={active.youtubeId}
+            src={`https://www.youtube-nocookie.com/embed/${active.youtubeId}`}
+            title={active.title}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="absolute inset-0 h-full w-full border-0"
+          />
         </div>
-        <span className="shrink-0 text-sm text-ink-soft">
-          Conférence du {active.date}
-        </span>
+        <div className="mt-4 flex flex-wrap items-baseline justify-between gap-3">
+          <div>
+            <h2 className="text-lg font-medium leading-snug text-ink">
+              {active.title}
+            </h2>
+            <p className="mt-1 text-sm text-ink-soft">{active.speaker}</p>
+          </div>
+          <span className="shrink-0 text-sm text-ink-soft">
+            Conférence du {active.date}
+          </span>
+        </div>
       </div>
 
       {rest.length > 0 && (

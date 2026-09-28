@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { PageBanner } from "@/components/PageBanner";
 import { ReplayLibrary } from "@/components/ReplayLibrary";
 import {
   CERCLE_ROUSSEAU_VIDEOS_URL,
   REPLAYS,
   YOUTUBE_CHANNEL_URL,
 } from "@/lib/data";
-import { asset } from "@/lib/asset";
 import { frenchDateToISO } from "@/lib/frenchDate";
 
 export const metadata: Metadata = {
@@ -34,17 +32,21 @@ export default function RetransmissionsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(VIDEO_JSON_LD) }}
       />
-      <PageBanner
-        title="Retransmissions"
-        description="Les conférences de la NSH-Genève sont enregistrées afin que celles et ceux qui n'ont pu s'y rendre puissent suivre les échanges dans leur intégralité."
-        image={{
-          src: asset("/media/hero/geneve-photo.jpg"),
-          alt: "Vue du Mont Blanc depuis Genève",
-        }}
-      />
+      <div className="border-b border-line bg-paper-raised">
+        <div className="mx-auto max-w-[1240px] px-6 py-5 md:px-10 md:py-6">
+          <h1 className="font-serif text-2xl text-ink md:text-3xl">
+            Retransmissions
+          </h1>
+          <p className="mt-2 max-w-[70ch] text-sm text-ink-soft">
+            Les conférences de la NSH-Genève sont enregistrées afin que
+            celles et ceux qui n&apos;ont pu s&apos;y rendre puissent suivre
+            les échanges dans leur intégralité.
+          </p>
+        </div>
+      </div>
 
-      <div className="mx-auto max-w-[1240px] px-6 py-16 md:px-10 md:py-20">
-        <p className="mb-10 text-sm text-ink-soft">
+      <div className="mx-auto max-w-[1240px] px-6 py-6 md:px-10 md:py-8">
+        <p className="mb-6 text-sm text-ink-soft">
           Chaîne YouTube{" "}
           <a
             href={YOUTUBE_CHANNEL_URL}
