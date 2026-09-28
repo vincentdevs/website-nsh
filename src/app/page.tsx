@@ -60,8 +60,17 @@ export default function HomePage() {
 
         <div className="bg-accent">
           <div className="mx-auto max-w-[1240px] px-6 py-8 md:px-10">
-            <div className="flex flex-col gap-4 border border-paper/25 p-6 md:flex-row md:items-center md:justify-between md:gap-8 md:p-8">
-              <div>
+            <div className="flex flex-col gap-6 border border-paper/25 p-6 md:flex-row md:items-center md:gap-8 md:p-8">
+              <div className="relative aspect-video w-full shrink-0 overflow-hidden md:w-56">
+                <Image
+                  src={UPCOMING_EVENT.photo}
+                  alt={UPCOMING_EVENT.title}
+                  fill
+                  sizes="(min-width: 768px) 224px, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex-1">
                 <span className="text-xs uppercase tracking-[0.14em] text-paper/75">
                   Prochain événement
                 </span>
