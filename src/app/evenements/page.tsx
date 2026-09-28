@@ -79,7 +79,7 @@ export default function EvenementsPage() {
                 )}
 
                 <article className="border-b border-line py-10">
-                  <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-start">
+                  <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-center">
                     <div className="relative aspect-[16/9] w-full overflow-hidden md:col-span-5">
                       <Image
                         src={event.photo}
@@ -91,12 +91,9 @@ export default function EvenementsPage() {
                     </div>
 
                     <div className="md:col-span-7">
-                      <div className="flex flex-wrap items-baseline gap-3">
-                        <p className="font-serif text-3xl text-ink">
-                          {event.dayNumber}
-                        </p>
-                        <p className="text-sm text-ink-soft">{event.time}</p>
-                      </div>
+                      <p className="text-sm font-medium uppercase tracking-[0.08em] text-ink-soft">
+                        {event.date} · {event.time}
+                      </p>
                       <h3 className="mt-2 text-xl font-medium text-ink">
                         {event.title}
                       </h3>
