@@ -107,7 +107,7 @@ export default function EvenementsPage() {
                       <p className="mt-2 text-sm text-ink-soft">
                         {event.location} · {event.address}
                       </p>
-                      <p className="mt-4 max-w-[60ch] text-base leading-[1.65] text-ink-soft">
+                      <p className="mt-4 max-w-[60ch] whitespace-pre-line text-base leading-[1.65] text-ink-soft">
                         {event.bio}
                       </p>
 

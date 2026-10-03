@@ -2,13 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { FeaturedReplays } from "@/components/FeaturedReplays";
 import { MailtoForm } from "@/components/MailtoForm";
+import { NextEventBanner } from "@/components/NextEventBanner";
 import { asset } from "@/lib/asset";
 import {
+  BUILT_AT,
   CERCLE_ROUSSEAU_EVENT,
   COMMITTEE,
   CONTACT_EMAIL,
+  EVENTS,
   REPLAYS,
-  UPCOMING_EVENT,
 } from "@/lib/data";
 
 export default function HomePage() {
@@ -60,36 +62,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="bg-red">
-          <div className="mx-auto max-w-[1240px] px-6 py-8 md:px-10">
-            <div className="flex flex-col gap-6 border border-paper/25 p-6 md:flex-row md:items-center md:gap-8 md:p-8">
-              <div className="relative aspect-video w-full shrink-0 overflow-hidden md:w-56">
-                <Image
-                  src={UPCOMING_EVENT.photo}
-                  alt={UPCOMING_EVENT.title}
-                  fill
-                  sizes="(min-width: 768px) 224px, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex-1">
-                <span className="text-xs uppercase tracking-[0.14em] text-paper/75">
-                  Prochain événement
-                </span>
-                <p className="mt-2 font-serif text-2xl text-paper">
-                  {UPCOMING_EVENT.date}
-                </p>
-                <p className="mt-1 text-paper/90">{UPCOMING_EVENT.title}</p>
-              </div>
-              <Link
-                href="/evenements"
-                className="inline-block shrink-0 border border-paper px-5 py-2.5 text-sm text-paper transition-colors hover:bg-paper hover:text-red"
-              >
-                Participer à cet événement
-              </Link>
-            </div>
-          </div>
-        </div>
+        <NextEventBanner events={EVENTS} builtAt={BUILT_AT} />
 
         <div className="bg-paper-raised">
           <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-8 px-6 py-10 md:grid-cols-12 md:items-center md:gap-10 md:px-10">
