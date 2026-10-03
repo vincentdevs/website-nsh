@@ -73,13 +73,17 @@ export default function EvenementsPage() {
             return (
               <div key={event.startDateTime}>
                 {showMonthHeader && (
-                  <h2 className="border-b border-line pb-3 text-sm font-medium uppercase tracking-[0.08em] text-ink-soft first:mt-0 [&:not(:first-child)]:mt-14">
+                  <h2 className="text-sm font-medium uppercase tracking-[0.08em] text-ink-soft first:mt-0 [&:not(:first-child)]:mt-14">
                     {event.monthLabel}
                   </h2>
                 )}
 
-                <article className="border-b border-line py-10">
-                  <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-start">
+                <article
+                  className={
+                    showMonthHeader ? "py-10" : "border-t border-hairline py-10"
+                  }
+                >
+                  <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-center">
                     <div className="relative aspect-[16/9] w-full overflow-hidden md:col-span-5">
                       <Image
                         src={event.photo}
@@ -91,12 +95,9 @@ export default function EvenementsPage() {
                     </div>
 
                     <div className="md:col-span-7">
-                      <div className="flex flex-wrap items-baseline gap-3">
-                        <p className="font-serif text-3xl text-ink">
-                          {event.dayNumber}
-                        </p>
-                        <p className="text-sm text-ink-soft">{event.time}</p>
-                      </div>
+                      <p className="text-sm font-medium uppercase tracking-[0.08em] text-ink-soft">
+                        {event.date} · {event.time}
+                      </p>
                       <h3 className="mt-2 text-xl font-medium text-ink">
                         {event.title}
                       </h3>
@@ -106,7 +107,7 @@ export default function EvenementsPage() {
                       <p className="mt-2 text-sm text-ink-soft">
                         {event.location} · {event.address}
                       </p>
-                      <p className="mt-4 max-w-[60ch] text-base leading-[1.65] text-ink-soft">
+                      <p className="mt-4 max-w-[60ch] whitespace-pre-line text-base leading-[1.65] text-ink-soft">
                         {event.bio}
                       </p>
 

@@ -65,7 +65,7 @@ export function MailtoForm({
 
   if (status === "success") {
     return (
-      <div className="max-w-xl border-l-2 border-accent bg-paper-raised px-6 py-8">
+      <div className="max-w-xl border-t border-hairline pt-6">
         <p className="text-base text-ink">
           Votre message a bien été envoyé. La NSH-Genève vous répondra dans
           les meilleurs délais.
@@ -83,8 +83,8 @@ export function MailtoForm({
         </label>
       </div>
 
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium text-ink">
+      <div className="field">
+        <label htmlFor="name">
           Nom
         </label>
         <input
@@ -92,12 +92,11 @@ export function MailtoForm({
           name="name"
           type="text"
           required
-          className="mt-2 w-full border border-line bg-paper px-4 py-2.5 text-base text-ink focus:border-accent focus:outline-none"
         />
       </div>
 
-      <div className="mt-6">
-        <label htmlFor="email" className="block text-sm font-medium text-ink">
+      <div className="field mt-8">
+        <label htmlFor="email">
           E-mail
         </label>
         <input
@@ -105,23 +104,18 @@ export function MailtoForm({
           name="email"
           type="email"
           required
-          className="mt-2 w-full border border-line bg-paper px-4 py-2.5 text-base text-ink focus:border-accent focus:outline-none"
         />
       </div>
 
-      <div className="mt-6">
-        <label
-          htmlFor="message"
-          className="block text-sm font-medium text-ink"
-        >
+      <div className="field mt-8">
+        <label htmlFor="message">
           Message
         </label>
         <textarea
           id="message"
           name="message"
-          rows={6}
+          rows={4}
           required
-          className="mt-2 w-full border border-line bg-paper px-4 py-2.5 text-base text-ink focus:border-accent focus:outline-none"
         />
       </div>
 

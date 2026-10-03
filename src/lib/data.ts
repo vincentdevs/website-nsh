@@ -51,7 +51,7 @@ export const COMMITTEE = [
 // Evenements publies sur nsh-ge.ch. Chaque entree porte startDateTime pour
 // permettre le tri chronologique ; ajouter un evenement ici suffit a le
 // faire apparaitre sur /evenements, tandis que la home n'affiche que le
-// plus proche a venir (voir UPCOMING_EVENT plus bas).
+// plus proche a venir (choisi dans le navigateur par NextEventBanner).
 export const EVENTS = [
   {
     title:
@@ -69,17 +69,33 @@ export const EVENTS = [
     registrationNote:
       "Entrée libre (mais sur inscription). Veuillez préciser le titre de la conférence dans l'objet du courriel.",
   },
+  {
+    title: "Qu'est-ce qui fait la Suisse ? Héritage, service, avenir",
+    speaker: "Derek Grangier",
+    date: "10 décembre 2026",
+    startDateTime: "2026-12-10T18:30:00+01:00",
+    dayNumber: "10",
+    monthLabel: "Décembre 2026",
+    time: "18h30",
+    location: "Maison Dufour",
+    address: "Rue de Contamines 9A, 1206 Genève",
+    photo: asset("/media/evenements/grangier-10-decembre-2026.jpg"),
+    bio: "À partir d'une réflexion articulée autour du passé, du présent et du futur, Derek Grangier proposera une conférence consacrée à l'origine possible des valeurs qui font la Suisse, à la manière dont elles se vivent aujourd'hui dans le service, ainsi qu'aux défis que leur transmission pose pour notre société.\n\nCuisinier de formation et diplômé de l'Ecole Hôtelière de Genève (EHG), le lieutenant-colonel d'état-major général Derek Grangier exerce des fonctions d'instructeur au sein de l'armée depuis 2013. Officier de carrière depuis 2017, il est actuellement commandant remplaçant de l'école de ravitaillement 45, à Drognens, et commandant du bataillon d'exploration 1 au sein de la brigade mécanisée 1.\n\nLa soirée sera également l'occasion de mettre en lumière son ouvrage Citoyen-soldat : des valeurs et un service militaire (Éditions à la Carte, 2025). Dans cet essai, l'auteur interroge le rôle du soldat et du chef militaire, leurs vertus et la place de l'engagement, du sens du devoir et de la conduite dans un monde en quête de repères.",
+    registrationNote:
+      "Entrée libre (mais sur inscription). Veuillez préciser le titre de la conférence dans l'objet du courriel.",
+  },
 ];
 
+// Heure du build, figee une fois pour toutes les pages generees.
+export const BUILT_AT = Date.now();
+
 export const UPCOMING_EVENTS = [...EVENTS]
-  .filter((event) => new Date(event.startDateTime).getTime() >= Date.now())
+  .filter((event) => new Date(event.startDateTime).getTime() >= BUILT_AT)
   .sort(
     (a, b) =>
       new Date(a.startDateTime).getTime() -
       new Date(b.startDateTime).getTime(),
   );
-
-export const UPCOMING_EVENT = UPCOMING_EVENTS[0] ?? EVENTS[0];
 
 export const REPLAYS = [
   {

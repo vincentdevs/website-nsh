@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const isGithubPagesBuild = process.env.GITHUB_PAGES === "true";
-const repoName = "website-nsh";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
@@ -10,12 +9,11 @@ const nextConfig: NextConfig = {
     unoptimized: isGithubPagesBuild,
   },
   env: {
-    NEXT_PUBLIC_BASE_PATH: isGithubPagesBuild ? `/${repoName}` : "",
+    NEXT_PUBLIC_BASE_PATH: "",
   },
   ...(isGithubPagesBuild
     ? {
         output: "export" as const,
-        basePath: `/${repoName}`,
         trailingSlash: true,
       }
     : {

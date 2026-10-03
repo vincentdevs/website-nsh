@@ -16,7 +16,7 @@ export default function SoutenirPage() {
     <div>
       <PageBanner
         title="Soutenir"
-        description="La NSH-Genève, organisation à but non lucratif, subsiste grâce à la générosité de ses membres et sympathisants. Votre contribution financière revêt une importance capitale, car elle nous permet de poursuivre notre mission avec détermination et efficacité."
+        description="La NSH-Genève, organisation à but non lucratif, subsiste grâce à la générosité de ses membres et sympathisants. Votre contribution nous permet de poursuivre notre mission."
         image={{
           src: asset("/media/hero/geneve-photo.jpg"),
           alt: "Vue de Genève et du Léman",

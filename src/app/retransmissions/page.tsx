@@ -43,8 +43,8 @@ export default function RetransmissionsPage() {
         }}
       />
 
-      <div className="mx-auto max-w-[1240px] px-6 py-16 md:px-10 md:py-20">
-        <p className="mb-10 text-sm text-ink-soft">
+      <div className="mx-auto max-w-[1240px] px-6 py-4 md:px-10 md:py-5">
+        <p className="mb-4 text-sm text-ink-soft">
           Chaîne YouTube{" "}
           <a
             href={YOUTUBE_CHANNEL_URL}

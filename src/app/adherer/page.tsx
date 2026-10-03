@@ -47,11 +47,11 @@ export default function AdhererPage() {
             <h2 className="text-[clamp(1.5rem,1.6vw+1rem,1.875rem)] leading-[1.2] text-ink">
               Cotisation
             </h2>
-            <div className="mt-8 flex flex-col gap-6">
+            <div className="mt-6 rules-between">
               {COTISATIONS.map((cotisation) => (
                 <div
                   key={cotisation.label}
-                  className="flex items-center justify-between border border-line bg-paper-raised px-6 py-5"
+                  className="flex items-center justify-between gap-6 py-5 first:pt-0 last:pb-0"
                 >
                   <div>
                     <p className="text-base font-medium text-ink">

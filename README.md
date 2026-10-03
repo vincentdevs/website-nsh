@@ -23,6 +23,12 @@ le contenu. Cette refonte le répartit sur sept pages, une par thème (Accueil,
 La NSH, Événements, Retransmissions, Adhérer, Soutenir, Contact), pour que
 chaque page réponde à une seule question du visiteur.
 
+## Avant de modifier le site
+
+Lire `DESIGN.md`, qui donne les valeurs exactes du design system, puis
+`GOTCHAS.md`, qui liste les erreurs déjà commises sur ce projet et les
+règles qui en sont sorties.
+
 ## Lancer le projet
 
 ```bash

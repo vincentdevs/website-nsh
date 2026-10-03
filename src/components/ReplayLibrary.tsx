@@ -16,46 +16,46 @@ export function ReplayLibrary({ replays }: { replays: typeof REPLAYS }) {
 
   return (
     <div>
-      <div
-        className="relative w-full overflow-hidden bg-paper-raised"
-        style={{ aspectRatio: "16 / 9" }}
-      >
-        <iframe
-          key={active.youtubeId}
-          src={`https://www.youtube-nocookie.com/embed/${active.youtubeId}`}
-          title={active.title}
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          className="absolute inset-0 h-full w-full border-0"
-        />
-      </div>
-      <div className="mt-4 flex flex-wrap items-baseline justify-between gap-3">
-        <div>
-          <h2 className="text-lg font-medium leading-snug text-ink">
-            {active.title}
-          </h2>
-          <p className="mt-1 text-sm text-ink-soft">{active.speaker}</p>
+      <div className="mx-auto max-w-[560px]">
+        <div
+          className="relative w-full overflow-hidden bg-paper-raised"
+          style={{ aspectRatio: "16 / 9" }}
+        >
+          <iframe
+            key={active.youtubeId}
+            src={`https://www.youtube-nocookie.com/embed/${active.youtubeId}`}
+            title={active.title}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="absolute inset-0 h-full w-full border-0"
+          />
         </div>
-        <span className="shrink-0 text-sm text-ink-soft">
-          Conférence du {active.date}
-        </span>
+        <div className="mt-4 flex flex-wrap items-baseline justify-between gap-3">
+          <div>
+            <h2 className="text-lg font-medium leading-snug text-ink">
+              {active.title}
+            </h2>
+            <p className="mt-1 text-sm text-ink-soft">{active.speaker}</p>
+          </div>
+          <span className="shrink-0 text-sm text-ink-soft">
+            Conférence du {active.date}
+          </span>
+        </div>
       </div>
 
       {rest.length > 0 && (
-        <div className="mt-14 border-t border-line pt-10">
+        <div className="mt-16">
           <h3 className="text-sm font-medium uppercase tracking-[0.08em] text-ink-soft">
             Toutes les retransmissions
           </h3>
           <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {shown.map((replay) => (
-              <button
+              <a
                 key={replay.youtubeId}
-                type="button"
-                onClick={() => {
-                  setActiveIndex(replays.indexOf(replay));
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
+                href={`https://www.youtube.com/watch?v=${replay.youtubeId}`}
+                target="_blank"
+                rel="noreferrer"
                 className="group block text-left"
               >
                 <div className="relative aspect-video overflow-hidden bg-paper">
@@ -72,7 +72,7 @@ export function ReplayLibrary({ replays }: { replays: typeof REPLAYS }) {
                 <p className="mt-1 text-sm text-ink-soft">
                   {replay.speaker} · {replay.date}
                 </p>
-              </button>
+              </a>
             ))}
           </div>
 

@@ -24,6 +24,10 @@ export default function ContactPage() {
       />
 
       <div className="mx-auto max-w-[1240px] px-6 py-16 md:px-10 md:py-20">
+        <p className="mb-10 max-w-[60ch] text-sm text-ink-soft">
+          Nous répondons à tous les messages, et le plus rapidement possible
+          dans la mesure de nos disponibilités.
+        </p>
         <div className="grid grid-cols-1 gap-16 md:grid-cols-12">
           <div className="md:col-span-7">
             <MailtoForm recipient={CONTACT_EMAIL} subject="Contact NSH-Genève" />
